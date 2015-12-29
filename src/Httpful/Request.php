@@ -1266,4 +1266,16 @@ class Request
     {
         return $this->expects(Mime::CSV);
     }
+
+    /**
+     * Sets http referer for request
+     *
+     * @param $referer
+     *
+     * @return Request
+     */
+    public function setReferrer($referer)
+    {
+        return $this->addHeader('Referer', $referer);
+    }
 }
